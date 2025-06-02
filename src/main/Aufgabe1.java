@@ -2,13 +2,13 @@ package src.main;
 
 import de.medieninf.ads.ADSTool;
 
-public class sort1 extends ADSTool.Sort {
+public class Aufgabe1 extends ADSTool.Sort {
 
     public static void main(String[] args) {
         // beispiel array
         int[] a = { 5, 3, 4, 2, 0, 2, 1, 4, 2, 7, 3, 2 };
         int m = 10;
-        sort1 sort1 = new sort1();
+        Aufgabe1 Aufgabe1 = new Aufgabe1();
 
         System.out.println("Array vor dem sortieren");
         for (int i : a) {
@@ -16,9 +16,12 @@ public class sort1 extends ADSTool.Sort {
         }
         System.out.println();
 
-        sort1.sort(a);
-        sort1.runSmall();
-        //sort1.runLarge();
+        Aufgabe1.sort(a);
+        System.out.println();
+        System.out.println("Small problem:");
+        Aufgabe1.runSmall();
+        System.out.println("Large problem:");
+        Aufgabe1.runLarge();
 
         System.out.println("Array nach dem Sortieren:");
         for (int i : a) {

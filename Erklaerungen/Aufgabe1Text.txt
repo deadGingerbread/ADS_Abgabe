@@ -1,0 +1,73 @@
+| Juliana Vorhees | Matrikelnr.: 1379954  |
+| Celia Poltorak  | Matrikelnr.: 1383575  |
+| Paula Petrovic  | Matrikelnr.: 1383687  |
+-------------------------------------------
+
+Bewertung Aufgabe 1 (Counting Sort)
+---------------------------------------
+
+- Zeitdauer
+-------------------------------------------
+
+Bei den kleinen Problemen (runSmall):
+
+a[        10]          0 Vergleiche          0 Vertauschungen       0.75 secs
+a[       100]          0 Vergleiche          0 Vertauschungen       0.84 secs
+a[      1000]          0 Vergleiche          0 Vertauschungen       0.76 secs
+a[     10000]          0 Vergleiche          0 Vertauschungen       0.66 secs
+a[     20000]          0 Vergleiche          0 Vertauschungen       0.62 secs
+a[     40000]          0 Vergleiche          0 Vertauschungen       0.61 secs
+a[     60000]          0 Vergleiche          0 Vertauschungen       0.62 secs
+
+
+Beim großen Problemen (runLarge):
+
+a[    100000]          0 Vergleiche          0 Vertauschungen       0.85 secs
+a[    200000]          0 Vergleiche          0 Vertauschungen       0.62 secs
+a[    400000]          0 Vergleiche          0 Vertauschungen       0.61 secs
+a[    800000]          0 Vergleiche          0 Vertauschungen       0.66 secs
+a[   1000000]          0 Vergleiche          0 Vertauschungen       0.60 secs
+
+->  Obwohl die Eingabegröße n deutlich wächst, bleibt die Laufzeit ziemlich konstant bei
+    etwa 0.6–0.85 Sekunden, sowohl bei kleinen als auch großen Problemen.
+
+->  Die konstanten Laufzeiten beim Counting Sort entstehen, weil der Algorithmus keine Vergleiche zwischen den Elementen durchführt,
+    sondern nur die Häufigkeit der Werte zählt und das Ergebnis direkt in das Array zurückschreibt. 
+    Bleibt der Wertebereich klein, ist der zusätzliche Aufwand bei wachsender Eingabegröße gering.
+    Die gemessene Zeit wird daher vor allem durch den konstanten Aufwand für Initialisierung und Speicherzugriffe bestimmt, 
+    sodass die Laufzeit auch bei großen Arrays nahezu unverändert bleibt
+
+- Laufzeit & Komplexität
+-------------------------------------------
+
+-> Besten Fall O(n):
+Im Best Case ist der Wertebereich m sehr viel kleiner als die Anzahl der Elemente n. 
+Der lineare Anteil der Laufzeit dominiert, da das Zählarray klein ist und dessen Initialisierung sowie Durchlauf kaum ins Gewicht fallen.
+Die Zeitkomplexität reduziert sich auf O(n), da sowohl das Zählen der Vorkommen als auch das Zurückschreiben der sortierten Werte jeweils nur einmal pro Element erfolgt.
+
+-> Mittleren Fall O(n+m):
+Im mittleren Fall sind m und n etwa gleich groß. Es müssen sowohl n Eingaben gezählt als auch m Positionen im Ausgabearray geprüft und gegebenenfalls geschrieben werden. 
+Die Laufzeit ergibt sich aus dem Aufwand beider Schritte.
+
+-> Schlechtesten Fall O(n+m):
+Der Worst Case tritt auf, wenn m deutlich größer als n ist. Zwar müssen weiterhin nur n Werte gezählt werden,
+jedoch ist das Zählarray sehr groß, und bei der Rückübertragung wird ein großer Bereich verarbeitet, auch wenn 
+viele Einträge leer sind. Das Verfahren ist dann speicherintensiv und ineffizient.
+
+- Vergleich zu bekannten Sortierverfahren 
+-------------------------------------------
+
+| Verfahren         | Best Case  | Average Case | Worst Case |
+| ----------------- | ---------- | ------------ | ---------- |
+|   Counting Sort   | O(n)       | O(n + m)     | O(n + m)   |
+|   QuickSort       | O(n log n) | O(n log n)   | O(n²)      |
+|   MergeSort       | O(n log n) | O(n log n)   | O(n log n) |
+|   InsertionSort   | O(n)       | O(n²)        | O(n²)      |
+
+Counting Sort ist besonders effizient bei bekannter, begrenzter Wertemenge m, dafür jedoch nicht geeignet für große Wertebereiche 
+oder negative Zahlen. Im Gegensatz zu vergleichsbasierten Algorithmen arbeitet Counting Sort ohne Vergleiche oder Vertauschungen, 
+was sich in den Messwerten zeigt.
+
+
+
+
