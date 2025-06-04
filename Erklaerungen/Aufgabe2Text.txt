@@ -1,0 +1,35 @@
+| Juliana Vorhees | Matrikelnr.: 1379954  |
+| Celia Poltorak  | Matrikelnr.: 1383575  |
+| Paula Petrovic  | Matrikelnr.: 1383687  |
+-------------------------------------------
+
+Bewertung Aufgabe 1 (Counting Sort)
+---------------------------------------
+
+- Zeitdauer
+-------------------------------------------
+
+Bei den kleinen Problemen (runSmall):
+Small problem:
+a[        10]          0 Vergleiche          0 Vertauschungen       0.00 secs
+a[       100]          0 Vergleiche          0 Vertauschungen       0.00 secs
+a[      1000]          0 Vergleiche          0 Vertauschungen       0.00 secs
+a[     10000]          0 Vergleiche          0 Vertauschungen       0.00 secs
+a[     20000]          0 Vergleiche          0 Vertauschungen       0.00 secs
+a[     40000]          0 Vergleiche          0 Vertauschungen       0.00 secs
+a[     60000]          0 Vergleiche          0 Vertauschungen       0.00 secs
+
+Beim großen Problemen (runLarge):
+Large problem:
+a[    100000]          0 Vergleiche          0 Vertauschungen       0.01 secs
+a[    200000]          0 Vergleiche          0 Vertauschungen       0.02 secs
+a[    400000]          0 Vergleiche          0 Vertauschungen       0.05 secs
+a[    800000]          0 Vergleiche          0 Vertauschungen       0.11 secs
+a[   1000000]          0 Vergleiche          0 Vertauschungen       0.14 secs
+
+- Laufzeit & Komplexität
+-------------------------------------------
+
+
+- Vergleich zu bekannten Sortierverfahren 
+-------------------------------------------

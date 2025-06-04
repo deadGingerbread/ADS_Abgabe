@@ -2,10 +2,22 @@ package src.main;
 
 import de.medieninf.ads.ADSTool;
 
+/**
+ * Aufgabe1 demonstrates the implementation of the Counting Sort algorithm.
+ * It extends the ADSTool.Sort class and provides sorting functionality
+ * for integer arrays.
+ */
 public class Aufgabe1 extends ADSTool.Sort {
 
+    /**
+     * The main method serves as the entry point for the program.
+     * It initializes an integer array, sorts it using the Counting Sort algorithm,
+     * and prints the array before and after sorting.
+     *
+     * @param args Command-line arguments (not used).
+     */
     public static void main(String[] args) {
-        // beispiel array
+        // Example array
         int[] a = { 5, 3, 4, 2, 0, 2, 1, 4, 2, 7, 3, 2 };
         int m = 10;
         Aufgabe1 Aufgabe1 = new Aufgabe1();
@@ -20,23 +32,35 @@ public class Aufgabe1 extends ADSTool.Sort {
         System.out.println();
         System.out.println("Small problem:");
         Aufgabe1.runSmall();
+        System.out.println();
         System.out.println("Large problem:");
         Aufgabe1.runLarge();
 
         System.out.println("Array nach dem Sortieren:");
         for (int i : a) {
-           // System.out.print(i + " ");
+            System.out.print(i + " ");
         }
     }
 
+    /**
+     * Sorts the given integer array using the Counting Sort algorithm.
+     * This method first determines the maximum value in the array and then
+     * calls the overloaded sort method with the array and the maximum value.
+     *
+     * @param a The array to be sorted.
+     */
     @Override
     public void sort(int[] a) {
-      
         int m = findeMax(a) + 1;
-        sort(a, m); 
+        sort(a, m);
     }
 
-    // Hilfsmethode, um das Maximum zu finden
+    /**
+     * Finds the maximum value in the given array.
+     *
+     * @param a The array to search for the maximum value.
+     * @return The maximum value in the array.
+     */
     private int findeMax(int[] a) {
         int max = a[0];
         for (int val : a) {
@@ -47,30 +71,29 @@ public class Aufgabe1 extends ADSTool.Sort {
     }
 
     /**
-     * 
-     * @param m Oberere Grenze
-     *          in zaehler wird die jeweilige häufigkeit gespeicher
-     *          e = der stelle im array
-     *          k = wert der akt. stelle e
-     *          m =
+     * Sorts the given integer array using the Counting Sort algorithm.
+     * Counting Sort is a non-comparison-based sorting algorithm that works
+     * by counting the occurrences of each element and reconstructing the array
+     * based on these counts.
+     *
+     * @param a The array to be sorted.
+     * @param m The upper bound (maximum value + 1) for the counting array.
      */
     public void sort(int[] a, int m) {
         int[] zaehler = new int[m];
 
-        // Für jedes Element e in a: zaehler[e] um 1 erhöhen
+        // Count occurrences of each element in the array
         for (int e : a) {
             zaehler[e]++;
         }
-        // fürs zurückgeben -> für jeden Index i, zaehler[i] mal i ins Array schreiben
+
+        // Reconstruct the array based on the counts
         int index = 0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < zaehler[i]; j++) {
                 a[index] = i;
                 index++;
-
             }
         }
-
     }
-
 }
