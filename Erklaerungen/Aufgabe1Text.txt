@@ -28,14 +28,14 @@ a[    400000]          0 Vergleiche          0 Vertauschungen       0.61 secs
 a[    800000]          0 Vergleiche          0 Vertauschungen       0.66 secs
 a[   1000000]          0 Vergleiche          0 Vertauschungen       0.60 secs
 
-->  Obwohl die Eingabegröße n deutlich wächst, bleibt die Laufzeit ziemlich konstant bei
-    etwa 0.6–0.85 Sekunden, sowohl bei kleinen als auch großen Problemen.
+Obwohl die Eingabegröße n deutlich wächst, bleibt die Laufzeit ziemlich konstant bei
+etwa 0.6–0.85 Sekunden, sowohl bei kleinen als auch großen Problemen.
 
-->  Die konstanten Laufzeiten beim Counting Sort entstehen, weil der Algorithmus keine Vergleiche zwischen den Elementen durchführt,
-    sondern nur die Häufigkeit der Werte zählt und das Ergebnis direkt in das Array zurückschreibt. 
-    Bleibt der Wertebereich klein, ist der zusätzliche Aufwand bei wachsender Eingabegröße gering.
-    Die gemessene Zeit wird daher vor allem durch den konstanten Aufwand für Initialisierung und Speicherzugriffe bestimmt, 
-    sodass die Laufzeit auch bei großen Arrays nahezu unverändert bleibt
+Die konstanten Laufzeiten beim Counting Sort entstehen, weil der Algorithmus keine Vergleiche zwischen den Elementen durchführt,
+sondern nur die Häufigkeit der Werte zählt und das Ergebnis direkt in das Array zurückschreibt. 
+Bleibt der Wertebereich klein, ist der zusätzliche Aufwand bei wachsender Eingabegröße gering.
+Die gemessene Zeit wird daher vor allem durch den konstanten Aufwand für Initialisierung und Speicherzugriffe bestimmt, 
+sodass die Laufzeit auch bei großen Arrays nahezu unverändert bleibt
 
 - Laufzeit & Komplexität
 -------------------------------------------

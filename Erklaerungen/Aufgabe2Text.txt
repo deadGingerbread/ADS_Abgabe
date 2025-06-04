@@ -12,7 +12,6 @@ Bewertung Aufgabe 2 (Shell Sort)
 -------------------------------------------
 
 Bei den kleinen Problemen (runSmall):
-Small problem:
 a[        10]          0 Vergleiche          0 Vertauschungen       0.00 secs
 a[       100]          0 Vergleiche          0 Vertauschungen       0.00 secs
 a[      1000]          0 Vergleiche          0 Vertauschungen       0.00 secs
@@ -22,7 +21,6 @@ a[     40000]          0 Vergleiche          0 Vertauschungen       0.00 secs
 a[     60000]          0 Vergleiche          0 Vertauschungen       0.00 secs
 
 Bei den großen Problemen (runLarge):
-Large problem:
 a[    100000]          0 Vergleiche          0 Vertauschungen       0.01 secs
 a[    200000]          0 Vergleiche          0 Vertauschungen       0.02 secs
 a[    400000]          0 Vergleiche          0 Vertauschungen       0.05 secs
@@ -31,20 +29,21 @@ a[   1000000]          0 Vergleiche          0 Vertauschungen       0.14 secs
 
 - Komplexität
 -------------------------------------------
-Shell Sort hat eine Worst-Case-Zeitkomplexität von O(n²) bei bestimmten Gap-Sequenzen. Mit optimierten
-Gap-Sequenzen (z. B. Hibbard oder Knuth) kann die Komplexität auf O(n^(3/2)) oder besser reduziert werden. 
-Die durchschnittliche Komplexität liegt typischerweise bei O(n^(3/2)), und die Best-Case-Komplexität ist O(n), 
-wenn das Array bereits sortiert ist.
+Unser Shell Sort hat eine Best-Case-Komplexität von O(n log n) 
+bei bereits sortierten Arrays, da nur wenige Verschiebungen nötig sind. Die Average-Case-Komplexität liegt 
+bei O(n^(3/2)), wobei die genaue Performance von der Datenverteilung abhängt. Im Worst-Case erreicht der 
+Algorithmus O(n²), wenn die Eingabedaten ungünstig für unsere Gap-Sequenz angeordnet sind, bessere 
+Gap-Sequenzen wie Knuth oder Hibbard könnten dies auf O(n^(3/2)) reduzieren.
 
 - Vergleich zu bekannten Sortierverfahren 
 -------------------------------------------
 
-| Verfahren       | Best-Case       | Average-Case    | Worst-Case      |
+| Verfahren       | Best Case       | Average Case    | Worst Case      |
 |-----------------|-----------------|-----------------|-----------------|
 | Quick Sort      | O(n log n)      | O(n log n)      | O(n²)           |
 | Merge Sort      | O(n log n)      | O(n log n)      | O(n log n)      |
 | Counting Sort   | O(n)            | O(n + m)        | O(n + m)        |
-| InsertionSort   | O(n)            | O(n²)           | O(n²)           |
+| Insertion Sort  | O(n)            | O(n²)           | O(n²)           |
 | Shell Sort      | O(n log n)      | O(n^(3/2))      | O(n²)           |
 
 Shell Sort ist schneller als einfache Algorithmen wie Bubble Sort und Insertion Sort für größere Datensätze,
