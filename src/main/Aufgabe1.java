@@ -2,21 +2,9 @@ package src.main;
 
 import de.medieninf.ads.ADSTool;
 
-/**
- * Aufgabe1 demonstrates the implementation of the Counting Sort algorithm.
- * It extends the ADSTool.Sort class and provides sorting functionality
- * for integer arrays.
- */
 public class Aufgabe1 extends ADSTool.Sort {
 
-    /**
-     * The main method serves as the entry point for the program.
-     * It initializes an integer array, sorts it using the Counting Sort algorithm,
-     * and prints the array before and after sorting.
-     *
-     * @param args Command-line arguments (not used).
-     */
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         // Example array
         int[] a = { 5, 3, 4, 2, 0, 2, 1, 4, 2, 7, 3, 2 };
         int m = 10;
@@ -29,11 +17,15 @@ public class Aufgabe1 extends ADSTool.Sort {
         System.out.println();
 
         Aufgabe1.sort(a);
+
         System.out.println();
         System.out.println("Small problem:");
+
         Aufgabe1.runSmall();
+
         System.out.println();
         System.out.println("Large problem:");
+
         Aufgabe1.runLarge();
 
         System.out.println("Array nach dem Sortieren:");
@@ -43,7 +35,7 @@ public class Aufgabe1 extends ADSTool.Sort {
     }
 
     /**
-     * Sorts the given integer array using the Counting Sort algorithm.
+     * Sorts the array using the Counting Sort algorithm.
      * This method first determines the maximum value in the array and then
      * calls the overloaded sort method with the array and the maximum value.
      *
@@ -72,9 +64,6 @@ public class Aufgabe1 extends ADSTool.Sort {
 
     /**
      * Sorts the given integer array using the Counting Sort algorithm.
-     * Counting Sort is a non-comparison-based sorting algorithm that works
-     * by counting the occurrences of each element and reconstructing the array
-     * based on these counts.
      *
      * @param a The array to be sorted.
      * @param m The upper bound (maximum value + 1) for the counting array.

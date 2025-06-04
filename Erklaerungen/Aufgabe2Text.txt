@@ -3,7 +3,9 @@
 | Paula Petrovic  | Matrikelnr.: 1383687  |
 -------------------------------------------
 
-Bewertung Aufgabe 1 (Counting Sort)
+-------------------------------------------
+
+Bewertung Aufgabe 2 (Shell Sort)
 ---------------------------------------
 
 - Zeitdauer
@@ -19,7 +21,7 @@ a[     20000]          0 Vergleiche          0 Vertauschungen       0.00 secs
 a[     40000]          0 Vergleiche          0 Vertauschungen       0.00 secs
 a[     60000]          0 Vergleiche          0 Vertauschungen       0.00 secs
 
-Beim großen Problemen (runLarge):
+Bei den großen Problemen (runLarge):
 Large problem:
 a[    100000]          0 Vergleiche          0 Vertauschungen       0.01 secs
 a[    200000]          0 Vergleiche          0 Vertauschungen       0.02 secs
@@ -27,9 +29,25 @@ a[    400000]          0 Vergleiche          0 Vertauschungen       0.05 secs
 a[    800000]          0 Vergleiche          0 Vertauschungen       0.11 secs
 a[   1000000]          0 Vergleiche          0 Vertauschungen       0.14 secs
 
-- Laufzeit & Komplexität
+- Komplexität
 -------------------------------------------
-
+Shell Sort hat eine Worst-Case-Zeitkomplexität von O(n²) bei bestimmten Gap-Sequenzen. Mit optimierten
+Gap-Sequenzen (z. B. Hibbard oder Knuth) kann die Komplexität auf O(n^(3/2)) oder besser reduziert werden. 
+Die durchschnittliche Komplexität liegt typischerweise bei O(n^(3/2)), und die Best-Case-Komplexität ist O(n), 
+wenn das Array bereits sortiert ist.
 
 - Vergleich zu bekannten Sortierverfahren 
 -------------------------------------------
+
+| Verfahren       | Best-Case       | Average-Case    | Worst-Case      |
+|-----------------|-----------------|-----------------|-----------------|
+| Quick Sort      | O(n log n)      | O(n log n)      | O(n²)           |
+| Merge Sort      | O(n log n)      | O(n log n)      | O(n log n)      |
+| Counting Sort   | O(n)            | O(n + m)        | O(n + m)        |
+| InsertionSort   | O(n)            | O(n²)           | O(n²)           |
+| Shell Sort      | O(n log n)      | O(n^(3/2))      | O(n²)           |
+
+Shell Sort ist schneller als einfache Algorithmen wie Bubble Sort und Insertion Sort für größere Datensätze,
+da es Elemente frühzeitig über große Distanzen verschieben kann. Es ist jedoch im Allgemeinen langsamer als 
+fortgeschrittene Algorithmen wie Merge Sort und Quick Sort, die eine Worst-Case-Komplexität von O(n log n) und O(n²) haben. 
+Shell Sort ist besonders nützlich für mittelgroße Arrays, bei denen sowohl Einfachheit als auch Effizienz gefragt sind.
